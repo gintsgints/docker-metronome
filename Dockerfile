@@ -14,12 +14,11 @@ RUN apt-get install -y libeigen3-dev
 RUN apt-get install -y git
 
 # Metronome compile
-RUN mkdir /metronome
 RUN git clone https://github.com/ahupowerdns/metronome.git /metronome
-RUN cd /metronome
-RUN ./bootstrap
-RUN ./configure
-RUN make
+RUN cd /metronome \
+    && ./bootstrap
+    && ./configure
+    && make
 
 # Prepeare run enviroment
 RUN mkdir /stats
