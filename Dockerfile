@@ -15,6 +15,7 @@ RUN apt-get install -y autoconf
 RUN apt-get install -y libeigen3-dev
 RUN apt-get install -y libboost-all-dev
 RUN apt-get install -y git
+RUN apt-get install -y supervisor
 
 # Metronome compile
 RUN git clone https://github.com/ahupowerdns/metronome.git /metronome
@@ -25,9 +26,10 @@ RUN cd /metronome \
 
 # Prepeare run enviroment
 RUN mkdir /stats
+ADD ./assets/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 # web and carbon ports
 EXPOSE 8000
 EXPOSE 2003
 
-CMD /metronome/metronome --stats-directory=/stats
+CMD /usr/bin/supervisord
