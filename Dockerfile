@@ -6,7 +6,7 @@ FROM ubuntu:trusty
 MAINTAINER Gints Polis <polis.gints@gmail.com>
 
 # Image maintenance
-sudo apt-get update
+RUN apt-get update
 
 # Development tools
 RUN apt-get install -y build-essential
