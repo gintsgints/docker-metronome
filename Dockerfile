@@ -1,14 +1,14 @@
-# docker-pdns
+# docker-metronome
 #
 # VERSION 0.1
 
-FROM centos:7
+FROM ubuntu:trusty
 MAINTAINER Gints Polis <polis.gints@gmail.com>
 
 # Development tools
-RUN yum -y groupinstall "Development Tools"
-RUN yum -y install eigen3-devel
-RUN yum -y install git
+RUN apt-get install -y build-essential
+RUN apt-get install -y libeigen3-dev
+RUN apt-get install -y git
 
 # Metronome compile
 RUN mkdir /metronome
