@@ -2,7 +2,7 @@
 #
 # VERSION 0.1
 
-FROM ubuntu:trusty
+FROM ubuntu:xenial
 MAINTAINER Gints Polis <polis.gints@gmail.com>
 
 # Image maintenance
