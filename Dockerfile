@@ -26,6 +26,8 @@ RUN cd /metronome \
 # Prepeare run enviroment
 RUN mkdir /stats
 
+# web and carbon ports
 EXPOSE 8000
+EXPOSE 2003
 
 CMD /metronome/metronome --stats-directory=/stats
