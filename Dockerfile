@@ -18,8 +18,8 @@ RUN apt-get install -y git
 # Metronome compile
 RUN git clone https://github.com/ahupowerdns/metronome.git /metronome
 RUN cd /metronome \
-    && ./bootstrap
-    && ./configure
+    && ./bootstrap \
+    && ./configure \
     && make
 
 # Prepeare run enviroment
