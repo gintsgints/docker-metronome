@@ -10,6 +10,8 @@ RUN apt-get update
 
 # Development tools
 RUN apt-get install -y build-essential
+RUN apt-get install -y dh-autoreconf
+RUN apt-get install -y autoconf
 RUN apt-get install -y libeigen3-dev
 RUN apt-get install -y git
 
