@@ -18,7 +18,7 @@ RUN apt-get install -y git
 RUN apt-get install -y supervisor
 
 # Metronome compile
-RUN git clone https://github.com/ahupowerdns/metronome.git /metronome
+RUN git clone https://github.com/gintsgints/metronome.git /metronome
 RUN cd /metronome \
     && ./bootstrap \
     && ./configure \
