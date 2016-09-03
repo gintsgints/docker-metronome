@@ -1,3 +1,5 @@
+[![](https://images.microbadger.com/badges/image/gintsgints/docker-metronome.svg)](https://microbadger.com/images/gintsgints/docker-metronome "Get your own image badge on microbadger.com")
+
 # docker-metronome
 Docker build for PowerDNS Metronome project.
 
